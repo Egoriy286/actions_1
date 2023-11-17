@@ -1,2 +1,6 @@
 ﻿flask 
 numpy
+flask_cors
+datetime
+sympy
+pytest
