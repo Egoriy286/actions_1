@@ -5,4 +5,3 @@ datetime
 sympy
 pytest
 requests
-http
