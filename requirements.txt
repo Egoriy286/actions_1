@@ -4,3 +4,5 @@ flask_cors
 datetime
 sympy
 pytest
+request
+http
