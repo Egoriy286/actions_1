@@ -1,9 +1,14 @@
 FROM python:3.11-slim
 
+WORKDIR /app
+
 COPY . .
 
-RUN pip install -r requirements.txt
+RUN python3 -m venv venv
+
+RUN pip3 install -r requirements.txt
 
 EXPOSE 5000
 
-CMD ["python","-m","flask", "--app=app","run","--host=0.0.0.0"]
+CMD ["gunicorn", "--bind", "0.0.0.0", "-w", "4","app:create_app"]
+#CMD ["python3","-m","flask", "--app=app","run","--host=0.0.0.0"]
